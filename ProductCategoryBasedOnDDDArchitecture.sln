@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCategory.Domain.Contract", "ProductCategory.Domain.Contract\ProductCategory.Domain.Contract.csproj", "{03CBC928-3AE9-4A6D-BA1D-2977715A0C4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCategory.Domain.Contract", "ProductCategory.Domain.Contract\ProductCategory.Domain.Contract.csproj", "{03CBC928-3AE9-4A6D-BA1D-2977715A0C4D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainLayer", "DomainLayer", "{28E555CF-43BD-4D12-9FA3-38B6BB732851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCategory.Domain", "ProductCategory.Domain\ProductCategory.Domain.csproj", "{742F6B12-D36F-4A36-9FEC-A311D9611590}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{03CBC928-3AE9-4A6D-BA1D-2977715A0C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03CBC928-3AE9-4A6D-BA1D-2977715A0C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03CBC928-3AE9-4A6D-BA1D-2977715A0C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{742F6B12-D36F-4A36-9FEC-A311D9611590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742F6B12-D36F-4A36-9FEC-A311D9611590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742F6B12-D36F-4A36-9FEC-A311D9611590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742F6B12-D36F-4A36-9FEC-A311D9611590}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{03CBC928-3AE9-4A6D-BA1D-2977715A0C4D} = {28E555CF-43BD-4D12-9FA3-38B6BB732851}
+		{742F6B12-D36F-4A36-9FEC-A311D9611590} = {28E555CF-43BD-4D12-9FA3-38B6BB732851}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {75ED8C11-640E-4626-8817-374EECC8ED57}
