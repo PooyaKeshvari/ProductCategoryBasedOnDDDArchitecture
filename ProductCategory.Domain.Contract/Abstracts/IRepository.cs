@@ -8,7 +8,7 @@ namespace ProductCategory.Domain.Contract.Abstracts
 {
     //Generic Repository For RDP.
     //.net 5 automaticly use UnitOfWork.
-    public interface IRepository<E_Entity,P_PrimaryKey>
+    public interface IRepository<E_Entity,P_PrimaryKey> where E_Entity:class
     {
 
         Task InsertAsync(E_Entity entity);
