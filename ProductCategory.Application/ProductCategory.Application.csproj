@@ -5,12 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="TanvirArjel.Extensions.Microsoft.DependencyInjection" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ProductCategory.Application.Contract\ProductCategory.Application.Contract.csproj" />
-    <ProjectReference Include="..\ProductCategory.Domain.Contract\ProductCategory.Domain.Contract.csproj" />
+    <ProjectReference Include="..\ProductCategory.Domain\ProductCategory.Domain.csproj" />
   </ItemGroup>
 
 </Project>

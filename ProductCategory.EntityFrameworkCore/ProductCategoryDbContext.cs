@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace ProductCategory.EntityFrameworkCore
 {
-   public class ProductCategoryDbContext:IdentityDbContext<ApplicationUser>
+    public class ProductCategoryDbContext : IdentityDbContext<ApplicationUser>
     {
         #region [-Ctor-]
-        public ProductCategoryDbContext(DbContextOptions<ProductCategoryDbContext> contextOptions):base(contextOptions)
+        public ProductCategoryDbContext(DbContextOptions<ProductCategoryDbContext> contextOptions) : base(contextOptions)
         {
 
         }
@@ -28,7 +28,7 @@ namespace ProductCategory.EntityFrameworkCore
 
         #region [-Aggregates-DbSet<>-]
         public DbSet<Domain.Aggregations.ProductAggregate.Product> Product { get; set; }
-        public DbSet<Domain.Aggregations.CategoryAggregate.Category> Category{ get; set; }
+        public DbSet<Domain.Aggregations.CategoryAggregate.Category> Category { get; set; }
         #endregion
 
     }

@@ -11,10 +11,15 @@ namespace ProductCategory.Domain.Aggregations.ProductAggregate
     {
 
         #region [-Ctor-]
-        public Product(string title, Category category, decimal unitPrice, decimal quantity)
+        public Product()
+        {
+
+        }
+        public Product(string title,int categoryId, decimal unitPrice, decimal quantity)
         {
             Title = title;
-            Category = category;
+            CategoryId = categoryId;
+          
             UnitPrice = unitPrice;
             Quantity = quantity;
         }
@@ -22,6 +27,7 @@ namespace ProductCategory.Domain.Aggregations.ProductAggregate
 
         #region [-Props-]
         public string Title { get; set; }
+        public int CategoryId { get; set; }
         public CategoryAggregate.Category Category { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal Quantity { get; set; }

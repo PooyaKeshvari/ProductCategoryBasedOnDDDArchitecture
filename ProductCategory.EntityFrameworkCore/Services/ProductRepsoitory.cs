@@ -25,6 +25,11 @@ namespace ProductCategory.EntityFrameworkCore.Services
             var target = await DbSet.FirstOrDefaultAsync(q => q.Title == title);
             return target;
         }
+        public async override Task<List<Product>> Select()
+        {
+            var q = await DbSet.AsNoTracking().Include(c => c.Category).ToListAsync();
+            return q;
+        }
         #endregion
 
 

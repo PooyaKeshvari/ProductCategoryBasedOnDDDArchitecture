@@ -1,4 +1,5 @@
-﻿using ProductCategory.Domain.Aggregations.CategoryAggregate;
+﻿using ProductCategory.Application.Contract.Frameworks.Abstract.Dtos;
+using ProductCategory.Domain.Aggregations.CategoryAggregate;
 using ProductCategory.Domain.Aggregations.ProductAggregate;
 using System;
 using System.Collections.Generic;
@@ -24,12 +25,14 @@ namespace ProductCategory.Domain.Factories
         #endregion
 
         #region [-Methods-]
-        public virtual async Task<Product> CheckThenCreateAsync(string title,Category category, decimal qty, decimal unitPrice)
+
+        #region [-CheckThenCreateAsync(string title,int categoryId, decimal qty, decimal unitPrice)-]
+        public virtual async Task<Product> CheckThenCreateAsync(string title, int categoryId, decimal qty, decimal unitPrice)
         {
             var current = await ProductRepository.FindByTitle(title);
             if (current == null)
             {
-                return new Product(title,category, qty, unitPrice);
+                return new Product(title, categoryId, qty, unitPrice);
             }
             else
             {
@@ -37,5 +40,21 @@ namespace ProductCategory.Domain.Factories
             }
         }
         #endregion
+
+        #region [-DtoConvertor(IProductDto productController)-]
+        public Product DtoConvertor(IProductDto productController)
+        {
+            var model = new Product();
+            model.Id = productController.Id;
+            model.Title = productController.Title;
+            model.CategoryId = productController.CategoryId;
+            model.UnitPrice = productController.UnitPrice;
+            model.Quantity = productController.Quantity;
+            return model;
+        }
+        #endregion
+
+        #endregion
+
     }
 }

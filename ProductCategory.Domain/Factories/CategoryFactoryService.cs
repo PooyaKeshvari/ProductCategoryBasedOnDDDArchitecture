@@ -25,12 +25,12 @@ namespace ProductCategory.Domain.Factories
         #endregion
 
         #region [-Methods-]
-        public virtual async Task<Category> CheckThenCreateAsync(string title,ICollection<Product> products)
+        public virtual async Task<Category> CheckThenCreateAsync(string title)
         {
             var current =await CategoryRepository.FindByTitleAsync(title);
             if (current==null)
             {
-                return new Category(title,products);
+                return new Category(title);
             }
             else
             {

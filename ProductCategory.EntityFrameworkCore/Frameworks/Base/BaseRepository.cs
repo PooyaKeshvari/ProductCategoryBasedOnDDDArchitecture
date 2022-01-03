@@ -39,7 +39,7 @@ namespace ProductCategory.EntityFrameworkCore.Frameworks.Base
         #region [-DeleteAsync(E_Entity entity)-]
         public virtual async Task DeleteAsync(E_Entity entity)
         {
-            if (Context.Entry(entity).State==EntityState.Detached)
+            if (Context.Entry(entity).State == EntityState.Detached)
             {
                 DbSet.Attach(entity);
             }
@@ -74,7 +74,7 @@ namespace ProductCategory.EntityFrameworkCore.Frameworks.Base
         #region [-Select()-]
         public virtual async Task<List<E_Entity>> Select()
         {
-            var q =await DbSet.AsNoTracking().ToListAsync();
+            var q = await DbSet.AsNoTracking().ToListAsync();
             return q;
         }
         #endregion

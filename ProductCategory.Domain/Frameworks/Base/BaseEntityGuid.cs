@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProductCategory.Domain.Frameworks.Base
 {
-    public class BaseEntityGuid : Abstract.IEntity<Guid>
+    public class BaseEntityGuid : Abstract.IEntity<Guid?>
     {
-        public Guid Id { get ; set ; }
+        public Guid? Id { get ; set ; }
     }
 }

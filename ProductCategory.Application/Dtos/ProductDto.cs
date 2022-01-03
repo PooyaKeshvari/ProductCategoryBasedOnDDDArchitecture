@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductCategory.Domain.Frameworks.Abstract
+namespace ProductCategory.Application.Dtos
 {
-   public interface IEntity<P_PrimaryKey>
+    public class ProductDto:Contract.Frameworks.Base.Dtos.BaseProductDto
     {
-        P_PrimaryKey? Id { get; set; }
     }
 }

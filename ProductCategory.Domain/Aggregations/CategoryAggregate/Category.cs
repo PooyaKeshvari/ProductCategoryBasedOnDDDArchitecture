@@ -11,10 +11,13 @@ namespace ProductCategory.Domain.Aggregations.CategoryAggregate
     {
 
         #region [-Ctor-]
-        public Category(string categoryTitle, ICollection<Product> products)
+        public Category()
+        {
+
+        }
+        public Category(string categoryTitle)
         {
             CategoryTitle = categoryTitle;
-            Products = products;
         }
         #endregion
 
