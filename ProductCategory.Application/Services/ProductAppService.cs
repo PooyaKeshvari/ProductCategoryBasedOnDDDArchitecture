@@ -50,14 +50,8 @@ namespace ProductCategory.Application.Services
         #region [-PostAsync(ProductDto entity)-]
         public async Task<ProductDto> PostAsync(ProductDto entity)
         {
-            //var model = new Product()
-            //{
-            //    Title = entity.Title,
-            //    Category = new Domain.Aggregations.CategoryAggregate.Category(),
-            //    UnitPrice = entity.UnitPrice,
-            //    Quantity = entity.Quantity
-            //};
-            var checkAndNew = Factory.DtoConvertor(entity); //await Factory.CheckThenCreateAsync(entity.Title,entity.CategoryId, entity.Quantity, entity.UnitPrice);
+           
+            var checkAndNew = Factory.DtoConvertor(entity); 
             await Repository.InsertAsync(checkAndNew);
             return Mapper.Map<ProductDto>(checkAndNew);
         }
