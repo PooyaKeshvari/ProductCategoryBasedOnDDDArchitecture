@@ -50,7 +50,6 @@ namespace ProductCategory.Application.Services
         #region [-PostAsync(ProductDto entity)-]
         public async Task<ProductDto> PostAsync(ProductDto entity)
         {
-           
             var checkAndNew = Factory.DtoConvertor(entity); 
             await Repository.InsertAsync(checkAndNew);
             return Mapper.Map<ProductDto>(checkAndNew);

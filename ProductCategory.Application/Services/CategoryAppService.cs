@@ -69,8 +69,6 @@ namespace ProductCategory.Application.Services
                 category.CategoryTitle = entity.CategoryTitle;
                 await Repository.UpdateAsync(category);
             }
-
-
         }
         #endregion
 

@@ -78,7 +78,6 @@ namespace ProductCategory.WebAPI
             });
             #endregion
 
-
             #endregion
 
             #region [-AddDbContextPool-]
@@ -102,8 +101,6 @@ namespace ProductCategory.WebAPI
             services.AddServicesOfAllTypes();
             services.AddServicesWithAttributeOfType<ScopedServiceAttribute>();
             #endregion
-
-
         }
         #endregion
 
